@@ -7,6 +7,19 @@ import numpy as np
 import ee
 from datetime import datetime, timedelta
 
+
+import ee
+import streamlit as st
+
+svc = st.secrets["EE_SERVICE_ACCOUNT"]
+key = st.secrets["EE_PRIVATE_KEY"]
+
+credentials = ee.ServiceAccountCredentials(svc, key_data=key)
+ee.Initialize(credentials=credentials, project="eighth-opus-452708-f6")
+
+st.success("✅ Earth Engine initialized with service account")
+
+
 # -----------------------------
 # Earth Engine initialization
 # -----------------------------
