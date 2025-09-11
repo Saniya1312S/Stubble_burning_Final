@@ -8,17 +8,28 @@ import ee
 from datetime import datetime, timedelta
 
 
-import ee
-import streamlit as st
+import ee, streamlit as st
 
-svc = st.secrets["EE_SERVICE_ACCOUNT"]
-key = st.secrets["EE_PRIVATE_KEY"]
+def init_ee_strict():
+    svc = st.secrets.get("EE_SERVICE_ACCOUNT")
+    key = st.secrets.get("EE_PRIVATE_KEY")
+    if not svc or not key:
+        st.error("Missing secrets: EE_SERVICE_ACCOUNT or EE_PRIVATE_KEY.")
+        st.stop()
+    try:
+        creds = ee.ServiceAccountCredentials(svc, key_data=key)
+        ee.Initialize(credentials=creds, project="eighth-opus-452708-f6")
+    except Exception as e:
+        st.exception(e)
+        st.stop()
 
-credentials = ee.ServiceAccountCredentials(svc, key_data=key)
-ee.Initialize(credentials=credentials, project="eighth-opus-452708-f6")
+@st.cache_resource
+def ee_start():
+    init_ee_strict()
+    return True
 
-st.success("✅ Earth Engine initialized with service account")
-
+ee_start()
+st.success("✅ EE initialized (service account)")
 
 # -----------------------------
 # Earth Engine initialization
