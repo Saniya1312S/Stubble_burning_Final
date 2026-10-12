@@ -1,0 +1,39 @@
+{
+  "rows": 239850,
+  "cells": 7995,
+  "parent_cells": 1692,
+  "date_min": "2024-07-02",
+  "date_max": "2024-07-31",
+  "n_days": 30,
+  "lat_range": [
+    8.246890253,
+    34.12598654
+  ],
+  "lon_range": [
+    68.76053026,
+    96.34274781679794
+  ],
+  "band_counts": {
+    "Low": 234952,
+    "Medium": 3867,
+    "High": 1031
+  },
+  "band_pct": {
+    "Low": 97.96,
+    "Medium": 1.61,
+    "High": 0.43
+  },
+  "p_min": 0.3990863919603264,
+  "p_median": 0.3995063296430775,
+  "p_max": 1.0,
+  "share_p_below_0_41": 0.9632603710652491,
+  "high_alert_rows": 1031,
+  "high_alert_rate_pct": 0.43,
+  "cells_ever_high": 81,
+  "cells_ever_high_pct": 1.01,
+  "high_cells_per_day": {
+    "min": 22,
+    "mean": 34.4,
+    "max": 47
+  }
+}

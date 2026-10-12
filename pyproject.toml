@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stubble-ews"
+version = "1.0.0"
+description = "Satellite-based 15-day stubble-burning early-warning pipeline for Punjab, India"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Saniya Saratkar" }, { name = "Havish Ravulapati" }]
+dependencies = [
+  "numpy>=1.24", "pandas>=2.0", "scipy>=1.10", "scikit-learn>=1.3",
+  "xgboost>=2.0", "h3>=4,<5", "matplotlib>=3.7", "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+stubble-ews = "stubble_ews.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

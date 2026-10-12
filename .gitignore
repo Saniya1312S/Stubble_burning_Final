@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+*.egg-info/
+.pytest_cache/
+# credentials - never commit
+*service*account*.json
+*-key.json
+.streamlit/secrets.local.toml
+# generated artefacts
+models/*.joblib
+outputs/*.csv
+data/raw/*
+!data/raw/.gitkeep
+.DS_Store

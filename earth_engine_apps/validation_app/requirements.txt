@@ -1,0 +1,6 @@
+streamlit==1.37.1
+earthengine-api==0.1.402
+pandas==2.2.2
+numpy==1.26.4
+streamlit-folium==0.18.0
+folium==0.17.0

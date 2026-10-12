@@ -1,0 +1,137 @@
+{
+  "data": {
+    "label": "SYNTHETIC (demo only)",
+    "n_detections": 31067,
+    "first_date": "2021-01-01",
+    "last_date": "2024-12-31"
+  },
+  "config": {
+    "h3_res": 6,
+    "horizon_days": 15,
+    "windows": [
+      1,
+      3,
+      7,
+      14,
+      30,
+      90
+    ],
+    "burn_in_days": 30,
+    "season_months": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "min_modis_confidence": 30,
+    "drop_low_confidence_viirs": true,
+    "train_end": "2023-01-31",
+    "val_end": "2023-12-31",
+    "beta": 2.0,
+    "medium_recall_target": 0.9,
+    "rf_trees": 150,
+    "rf_max_samples": 0.15,
+    "xgb_trees": 300,
+    "random_state": 42,
+    "alert_days": 30,
+    "extra": {}
+  },
+  "split": {
+    "train": {
+      "rows": 665144,
+      "from": "2021-09-01",
+      "to": "2022-12-31",
+      "positive_rate": 0.1462390124797821
+    },
+    "val": {
+      "rows": 332572,
+      "from": "2023-09-01",
+      "to": "2023-12-31",
+      "positive_rate": 0.13717931509017944
+    },
+    "test": {
+      "rows": 291682,
+      "from": "2024-09-01",
+      "to": "2024-12-16",
+      "positive_rate": 0.13276787102222443
+    }
+  },
+  "thresholds": {
+    "high": 0.14868421052631575,
+    "medium": 0.09806756934402525,
+    "low": 0.04903378467201262,
+    "val_fbeta_at_high": 0.7027183864131141,
+    "beta": 2.0
+  },
+  "test": {
+    "ranking_ensemble": {
+      "pr_auc": 0.6050233584840764,
+      "roc_auc": 0.8975858424833706,
+      "brier": 0.07569264001387162,
+      "prevalence": 0.13276787102222443,
+      "majority_class_accuracy": 0.8672321438789368
+    },
+    "ranking_members": {
+      "logreg": {
+        "pr_auc": 0.6126539874813477,
+        "roc_auc": 0.8946082073004624,
+        "brier": 0.17033255202505196,
+        "prevalence": 0.13276787102222443,
+        "majority_class_accuracy": 0.8672321438789368
+      },
+      "random_forest": {
+        "pr_auc": 0.5902013896937826,
+        "roc_auc": 0.8929598458503716,
+        "brier": 0.1339859414269313,
+        "prevalence": 0.13276787102222443,
+        "majority_class_accuracy": 0.8672321438789368
+      },
+      "xgboost": {
+        "pr_auc": 0.6030283398646429,
+        "roc_auc": 0.8955087687912922,
+        "brier": 0.15232671797275543,
+        "prevalence": 0.13276787102222443,
+        "majority_class_accuracy": 0.8672321438789368
+      }
+    },
+    "at_high_threshold": {
+      "tp": 33377,
+      "fp": 57242,
+      "fn": 5349,
+      "tn": 195714,
+      "precision": 0.36832231651198977,
+      "recall": 0.86187574239529,
+      "f1": 0.5160926205110364,
+      "f2": 0.6797122876471857,
+      "accuracy": 0.7854135668296295,
+      "specificity": 0.7737076803871029,
+      "alert_rate": 0.3106773815319423
+    },
+    "at_medium_threshold": {
+      "tp": 35265,
+      "fp": 77819,
+      "fn": 3461,
+      "tn": 175137,
+      "precision": 0.31184782993173216,
+      "recall": 0.9106285183081134,
+      "f1": 0.46459390027007447,
+      "f2": 0.6579585653088944,
+      "accuracy": 0.7213403638208734,
+      "specificity": 0.692361517418049,
+      "alert_rate": 0.3876961896860279
+    },
+    "baseline_persistence_14d": {
+      "tp": 15165,
+      "fp": 21787,
+      "fn": 23561,
+      "tn": 231169,
+      "precision": 0.41039727213682614,
+      "recall": 0.3915973764396013,
+      "f1": 0.40077697613573293,
+      "f2": 0.3952182887165374,
+      "accuracy": 0.8445293161730926,
+      "specificity": 0.9138703964325812,
+      "alert_rate": 0.12668591136923088
+    }
+  }
+}
