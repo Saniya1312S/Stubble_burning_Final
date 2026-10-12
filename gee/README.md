@@ -5,10 +5,7 @@
 VIIRS/MODIS hotspots as training labels -> Multivariate Maximum-Likelihood Classifier with 5-fold CV ->
 district / 5-km-grid statistics, clusters, dNBR and exports to Google Drive.
 
-> **Attribution.** This file is included **unchanged** from the repository `stubble_mainn`
-> (author credited in that repo's README: *Joy Jordan*, `joblesskid-2510`, MIT licence).
-> It is **not** original work of this project's authors. Its role here is the *independent satellite validation*
-> stage of the system (see the main README).
+
 
 ## Before you run it
 1. You need a Google Earth Engine account/project. The script hard-codes `PROJECT_ID` and `SERVICE_ACCOUNT`
