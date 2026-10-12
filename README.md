@@ -7,7 +7,7 @@ validates it with Sentinel-2 imagery, shows it on a live dashboard and e-mails a
 ![Satellite](https://img.shields.io/badge/Data-NASA%20FIRMS%20%7C%20Sentinel--1%2F2-green) ![Dashboard](https://img.shields.io/badge/Dashboard-Streamlit-red)
 ![Tests](https://img.shields.io/badge/tests-8%20passing-brightgreen) ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-Internship project · **Saniya Saratkar & Havish Ravulapati** · Guide: **Dr. Jaya Saxena** · presented 15 Sep 2025
+
 
 ![Target area: Punjab](docs/images/target_area_punjab.jpg)
 
