@@ -228,7 +228,5 @@ integration with government agencies · generative-AI scenario simulation for po
 10. NASA FIRMS — https://firms.modaps.eosdis.nasa.gov · Uber H3 — https://h3geo.org
 11. Saratkar, S., Ravulapati, H. (2025). *Stubble-Burning Risk Assessment with Alert System* (internship presentation, guide Dr. Jaya Saxena).
 
-## 👥 Credits & licence
-* **Authors:** Saniya Saratkar ([@Saniya1312S](https://github.com/Saniya1312S)) · Havish Ravulapati · Guide: Dr. Jaya Saxena.
-* `gee/punjab_stubble_pipeline.py` is third-party code (*Joy Jordan*, repo `stubble_mainn`, MIT) included with attribution.
-* Released under the [MIT License](LICENSE).
+
+* **Authors:** Saniya Saratkar 
